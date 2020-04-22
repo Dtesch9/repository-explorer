@@ -3,8 +3,6 @@
   <a href="https://github.com/Dtesch9/fastfeet">
     <img src="https://github.com/Dtesch9/repository-explorer/blob/master/images/logo.png" alt="Logo">
   </a>
-
-  <h3 align="center">GoStack</h3>
 </p>
 <br />
 
@@ -22,6 +20,9 @@
 
 - [Referências](#refer%C3%AAncias)
 - [Sobre o projeto](#sobre-o-projeto)
+- [Instalação](#instala%C3%A7%C3%A3o)
+- [Rodando o projeto](#rodando%20o%20projeto)
+- [Exemplos de uso](#exemplos%20de%20uso)
   
 ## Sobre o projeto
 
@@ -45,9 +46,9 @@ Busque seus repositórios favoritos ou descubra-os utilizando o Repository Explo
 
 ## Exemplos de uso
 
-- [Digite dono/repositório](Digite%20dono%2Freposit%C3%B3rio)
-- [Deletando repositório](Deletando%20reposit%C3%B3rio)
-- [Tela de issues](Tela%20de%20issues)
+- [Digite dono/repositório](#digite-donoreposit%C3%B3rio)
+- [Deletando repositório](#deletando-reposit%C3%B3rio)
+- [Tela de issues](#tela-de-issues)
 
 ## Digite dono/repositório
 
