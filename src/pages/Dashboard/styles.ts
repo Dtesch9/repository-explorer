@@ -60,19 +60,38 @@ export const Error = styled.span`
 export const Repositories = styled.div`
   margin-top: 80px;
   max-width: 700px;
+  position: relative;
+
+  > div {
+    & + div {
+      margin-top: 8px;
+    }
+
+    svg:first-child {
+      position: absolute;
+      left: 0px;
+      color: #cbcbd6;
+      background: #fff;
+      border-radius: 5px 0px 0px 5px;
+      height: 130px;
+      transition: all 0.2s;
+
+      &:hover {
+        color: red;
+        background: ${(shade(0.00001), '#cbcbd6')};
+      }
+    }
+  }
 
   a {
     background: #fff;
     border-radius: 5px;
     width: 100%;
+    height: 130px;
     padding: 24px;
     display: flex;
     align-items: center;
     transition: transform 0.2s;
-
-    & + a {
-      margin-top: 8px;
-    }
 
     &:hover {
       transform: translateX(10px);
@@ -100,7 +119,7 @@ export const Repositories = styled.div`
       }
     }
 
-    svg {
+    svg:last-child {
       margin-left: auto;
       color: #cbcbd6;
     }

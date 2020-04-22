@@ -1,5 +1,5 @@
-import React, { useState, useCallback, FormEvent } from 'react';
-import { FiChevronRight } from 'react-icons/fi';
+import React, { useState, useEffect, useCallback, FormEvent } from 'react';
+import { FiChevronRight, FiX } from 'react-icons/fi';
 
 import api from '../../services/api';
 
@@ -19,7 +19,24 @@ interface Repository {
 const Dashboard: React.FC = () => {
   const [newRepo, setNewRepo] = useState('');
   const [inputError, setInputError] = useState('');
-  const [repositories, setRepositories] = useState<Repository[]>([]);
+  const [repositories, setRepositories] = useState<Repository[]>(() => {
+    const storagedRepositories = localStorage.getItem(
+      '@RepositoryExplorer:repositories',
+    );
+
+    if (storagedRepositories) {
+      return JSON.parse(storagedRepositories);
+    }
+
+    return [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem(
+      '@RepositoryExplorer:repositories',
+      JSON.stringify(repositories),
+    );
+  }, [repositories]);
 
   const handleAddRepository = useCallback(
     async (event: FormEvent<HTMLFormElement>): Promise<void> => {
@@ -54,6 +71,13 @@ const Dashboard: React.FC = () => {
     [newRepo, repositories],
   );
 
+  const handleRemoveRepository = useCallback(
+    (id: string) => {
+      setRepositories(repositories.filter(repo => repo.full_name !== id));
+    },
+    [repositories],
+  );
+
   return (
     <>
       <img src={logoImg} alt="Logo" />
@@ -72,15 +96,21 @@ const Dashboard: React.FC = () => {
 
       <Repositories>
         {repositories.map(repo => (
-          <a key={repo.full_name} href="/">
-            <img src={repo.owner.avatar_url} alt="Douglas Tesch" />
-            <div>
-              <strong>{repo.full_name}</strong>
-              <p>{repo.description}</p>
-            </div>
+          <div key={repo.full_name}>
+            <FiX
+              size={20}
+              onClick={() => handleRemoveRepository(repo.full_name)}
+            />
+            <a href="/">
+              <img src={repo.owner.avatar_url} alt="Douglas Tesch" />
+              <div>
+                <strong>{repo.full_name}</strong>
+                <p>{repo.description}</p>
+              </div>
 
-            <FiChevronRight size={24} />
-          </a>
+              <FiChevronRight size={24} />
+            </a>
+          </div>
         ))}
       </Repositories>
     </>
