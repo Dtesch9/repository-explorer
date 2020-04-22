@@ -20,9 +20,9 @@
 
 - [Referências](#refer%C3%AAncias)
 - [Sobre o projeto](#sobre-o-projeto)
-- [Instalação](#instala%C3%A7%C3%A3o)
-- [Rodando o projeto](#rodando%20o%20projeto)
-- [Exemplos de uso](#exemplos%20de%20uso)
+- [Instalação](#nstala%C3%A7%C3%A3o-)
+- [Rodando o projeto](#rodando-o-projeto-)
+- [Exemplos de uso](#exemplos-de-uso)
   
 ## Sobre o projeto
 
