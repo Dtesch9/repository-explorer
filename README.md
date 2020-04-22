@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Dtesch9/fastfeet">
-    <img src="" alt="Logo">
+    <img src="https://github.com/Dtesch9/repository-explorer/blob/master/images/logo.png" alt="Logo">
   </a>
 
   <h3 align="center">Repository Explorer</h3>
