@@ -38,7 +38,7 @@ Busque seus repositórios favoritos ou descubra-os utilizando o Repository Explo
 ## Instalação 🔥
 
 1. Clone o repositório;
-2. Entre na pasta `cd fastfeet`;
+2. Entre na pasta `cd repository-explorer`;
 3. Rode `$ yarn` ou `$ npm install` para instalar as dependências;
 
 ## Rodando o projeto 🔥 
